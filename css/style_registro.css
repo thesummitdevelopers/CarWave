@@ -100,3 +100,8 @@ footer{
 .login a:hover {
   color: #fff;
 }
+.icons-social i {
+	font-size: 3em;
+  padding:5px;
+  margin-right: 45px;
+}
