@@ -1,12 +1,68 @@
-<!DOCTYPE html>
-<html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Pagina Principal</title>
-
-  </head>
-  <body>
-    <h1>Pagina PRINCIPAL</h1>
-    <p>Apartir de aqui, empezar el proyecto.</p>
-  </body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Car-Wave!</title>
+  
+  <link rel="stylesheet" href="css/styles_index.css">
+</head>
+<body>
+   
+   <div id="fondo">
+      <div class="banner">
+          <div class="titulo_cont"></div>
+              <h1 class="titulo">Alquila todos los autos y el tuyo</h1>
+          <div class="filtro_cont">
+              <form class="categoraias_ubicacion">
+                  <div class="entrada_contenido">
+                      <fieldset class="selectores_car_contenido">
+                          <select class="select">
+                              <option value="">Toyota</option>
+                              <option value="">Nissan</option>
+                              <option value="">KIA</option>
+                          </select>
+                      </fieldset>
+                      <fieldset class="selectores_mod_contenido">
+                         <select class="select">
+                              <option value="">Corola</option>
+                              <option value="">Versa</option>
+                              <option value="">Picanto</option>
+                         </select>
+                      </fieldset>
+                  </div>
+                  <div class="entrad_contenido2">
+                      <fieldset class="selectores_precio">
+                          <div class="precio_contenido">
+                              <input class="rango" type="text" placeholder="Precio desde">
+                              <input class="rango" type="text" placeholder="Precio hasta">
+                          </div>
+                      </fieldset>
+                          
+                      <fieldset class="selectores_year">
+                         <div class="year-contenido">
+                              <select class="rango_year">
+                                  <option value="2015">2015</option>
+                                  <option value="2016">2016</option>
+                                  <option value="2017">2017</option>
+                              </select>
+                              <select class="rango_year">
+                                  <option value="2016">2016</option>
+                                  <option value="2017">2017</option>
+                                  <option value="2018">2018</option>
+                              </select>
+                          </div>
+                      </fieldset>
+                  </div>
+                  <div></div>
+              </form>
+          </div>
+          <div class="acciones_cont">
+              <button type="button" class="btn btn-primary" >Buscar</button>
+          </div>
+      </div>
+       
+   </div>
+ 
+</body>
 </html>
