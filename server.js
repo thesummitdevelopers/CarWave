@@ -1,4 +1,4 @@
-//Importamos los paquetes necesarios
+///Importamos los paquetes necesarios
 var express     = require('express');     //Importamos express
 var app         = express();              //Instanciamos una aplicacion
 var bodyParser  = require('body-parser');
@@ -19,20 +19,20 @@ router.get('/', function(req,res){
   res.json({ message: 'genial! Bienvenido a nuestra api!'});
 });
 
-//var usuariosRouter = require('./registros/usuarios');
-//var publicacionesRouter = require('./registros/publicaciones');
+var usuariosRouter = require('./registros/usuarios');
+router.use('/usuarios', usuariosRouter);
 
-//router.use('/usuarios', usuariosRouter);
-//router.use('/publicaciones', publicacionesRouter);
+var publicacionesRouter = require('./registros/publicaciones');
+router.use('/publicaciones', publicacionesRouter);
 
 // REGISTREMOS NUESTRAS RUTAS -------
 // TODAS LAS RUTAS TENDRAN EL PREFIJO /API
 app.use('/api', router);
 
 //Nos conectamos a nuestra base de datos
-//var mongoose = require('mongoose');
-//mongoose.connect('mongodb://localhost:27017/CarWave')
-//mongoose.Promise = global.Promise;
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/CarWave')
+mongoose.Promise = global.Promise;
 //INICIAMOS EL SERVIDOR
 //====================================
 app.listen(port);
