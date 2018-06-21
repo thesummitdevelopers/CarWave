@@ -22,7 +22,7 @@ module.exports = {
       nombres: req.body.nombres,
       apellidos: req.body.apellidos,
       telefono: req.body.telefono,
-      correo: req.body.telefono,
+      correo: req.body.correo ,
       valoracion: req.body.valoracion
     });
     usuario
