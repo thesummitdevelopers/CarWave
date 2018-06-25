@@ -1,3 +1,8 @@
-encabezado{
+.encabezado{
+  width: 100%;
+  background-color: #00709f;
+}
 
+.filtros{
+  width: 200px;
 }
