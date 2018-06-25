@@ -3,7 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Login CarWave</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/jquery-ui.js"></script>
+    <script src="scripts/login.js"></script>
+
   </head>
   <body>
     <div class="login">
@@ -12,13 +16,15 @@
       <form>
         <!-- Usuario -->
         <label for="username">Username</label>
-        <input type="text" placeholder="Ingrese el usuario">
+        <input type="text" placeholder="Ingrese el usuario" id = "user">
         <!-- Contraseña -->
         <label for="password">Password</label>
-        <input type="password" placeholder="Ingrese la contraseña ">
-        <input type="submit" value="Log In">
+        <input type="password" placeholder="Ingrese la contraseña " id ="passwd">
+        <input type="submit" value="Log In" id="ingresar">
         <a href="#">Olvidaste la Contraseña?</a><br>
         <a href="#">Eres Nuevo? Registrate</a>
+
+        <!--<input type="checkbox" checked="checked" name="remember"> Remember 	me-->
       </form>
     </div>
   </body>
