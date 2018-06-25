@@ -22,6 +22,8 @@ div.gallery img {
 }
 div.gallery img:hover {
     transform: scale(1.1);
+    
+
 }
 
 div.desc {
