@@ -6,9 +6,7 @@ $('document').ready(function(){
            alert("Ingrese los campos");
          }
          else {
-           alert("Safgsdg");
+           alert("Introducir los datos correctos");
          }
    });
 });
-
-

@@ -1,8 +1,13 @@
+
 .encabezado{
   width: 100%;
-  background-color: #00709f;
+  background-color: #0018A8;
 }
 
 .filtros{
   width: 200px;
+  background: #AE4A84;
+}
+body{
+  background: #436b95;
 }
