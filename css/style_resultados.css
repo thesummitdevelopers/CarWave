@@ -1,34 +1,37 @@
-
-.encabezado{
-  width: 100%;
-  background-color: #0018A8;
+.barra{
+  padding-bottom: 5px;
 }
-
 .filtros{
   width: 200px;
   background: #AE4A84;
 }
-body{
-  background: #436b95;
+
+#nav{
+  background-color: #00709f;
 }
-#nav > a:hover{
+
+#nav a:hover{
   color: #faffa3;
 }
-#nav > a{
+
+#nav a{
   display: inline-block;
-  padding: 0 10px 0 10px;
+  padding: 0 50px 0 50px;
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
   color: white;
   text-shadow: #000 0 -1px 0;
 }
-#nav{
-  width: 100%;
-  background-color: #00709f;
-  text-align: center;
+
+#img{
+  padding: none;
 }
 
-.filtros{
-  width: 200px;
+input{
+  height: 30px;
+  width: 350px;
+  font-size: 20px;
+  padding-left: 5px;
+  border: none;
 }
