@@ -30,7 +30,7 @@ module.exports = {
       año_veh: req.body.año_veh,
       titulo: req.body.titulo,
       descripcion: req.body.descripcion,
-      fecha_pub: req.body.fecha_pub,
+      fecha_pub: new Date(),
       imagenes: req.body.imagenes,
       tipo_servicio: req.body.tipo_servicio
     });
@@ -60,7 +60,7 @@ module.exports = {
           count: docs.length,
           data : docs.map(doc=>{
             return{
-                ...doc
+                ...doc['_doc']
             };
           })
         };
