@@ -6,51 +6,94 @@
     <link rel="stylesheet" href="css/jquery-ui.css">
     <script type="text/javascript" src="scripts/jquery.js"></script>
     <script type="text/javascript" src="scripts/jquery-ui.js"></script>
-    <link rel="stylesheet" href="css/style_x_publicacion.css">
+    <link rel="stylesheet" href="css/style_publicacion.css">
   </head>
   <body>
-    <nav id="nav">
-      <div class="barra">
-        <a href="index.html"><img src="assets/img_login2.png" width="50px" heigth="50px"></a>
-        <input type="text" id="busqueda" placeholder=" ¿Qué estás buscando?">
-        <a id="img" href="publicacion.html"><img src="assets/busqueda.png" width="25px" heigth="25px"></a>
-        <a href="login.html">Ingresar</a>
-        <a href="registro.html">Registrarse</a>
-        <a href="">Publicar</a>
-      </div>
-    </nav>
-  <div id="caja_principal">
-    <div class="flex-container" id="caja_izquierda">
-      <div class="item">
-        <img src="assets/auto_particular.png" width=150px height=100px>
-      </div>
-      <div class="item">
-        <img src="assets/auto_particular.png" width=150px height=100px>
-      </div>
-      <div class="item">
-        <img src="assets/auto_particular.png" width=150px height=100px>
-      </div>
-      <div class="item">
-        <img src="assets/auto_particular.png" width=150px height=100px>
-      </div>
-    </div>
-    <div class="big_image" id="caja_medio">
-      <div class="grande">
-        <img id="img" src="assets/auto_particular.png" width=550px height=300px>
-      </div>
-      </div>
-    <div class="textos" id="caja_derecha">
-      <div class="titulo">
-        <textarea name="comentario" rows="1" cols="40" disabled= "true" >Titulo del carro</textarea>
-      </div>
-      <div class="com">
-        <textarea name="comentarios" rows="25" cols="50" disabled= "true" >Contenido de los detalles del carro</textarea>
-      </div>
-      <div class="text_final">
-        <textarea name="comentarios" rows="2" cols="50" disabled= "true" >Detalles del dueño del carro</textarea>
-      </div>
+    <div class="general">
+
+      <!-- Barra de navegación -->
+      <div id="nav">
+        <div class="barraNavegacion">
+          <a href="index.html"><img src="assets/img_login2.png" width="50px" heigth="50px"></a>
+          <input type="text" id="busqueda" placeholder=" ¿Qué estás buscando?">
+          <a id="img" href="publicacion.html"><img src="assets/busqueda.png" width="25px" heigth="25px"></a>
+          <a href="login.html">Ingresar</a>
+          <a href="registro.html">Registrarse</a>
+          <a href="">Publicar</a>
+        </div>
       </div>
 
-</div>
+      <div class="imagenesPrevias">
+        <div class="item">
+          <img src="assets/auto_particular.png" width=140px height=100px>
+        </div>
+
+        <div class="item">
+          <img src="assets/auto_particular.png" width=140px height=100px>
+        </div>
+
+        <div class="item">
+          <img src="assets/auto_particular.png" width=140px height=100px>
+        </div>
+
+        <div class="item">
+          <img src="assets/auto_particular.png" width=140px height=100px>
+        </div>
+      </div>
+
+      <div class="imagenCompleta">
+        <div class="item">
+          <img src="assets/fondo_login.jpg" width=490px height=auto>
+        </div>
+      </div>
+
+      <div class="descripcion">
+        <h1 class="titulo">Alquilo wea en perfecto estado</h1>
+        <h1 class="cuerpo">*Contenido de la publicación*
+          Ejmpl.
+          Mi camioneta está en perfecto estado, es ideal para recorrer grandes distancias y su motor de alta potencia permite cargar material pesado sin esfuerzo.
+
+          Los precios son, a mi parecer, una ganga por el buen vehículo que ofrezco. Solo vean las imágenes, está en su 100%!!
+
+          Los interesados escribirme al correo: example@hotmail.com o llamar al 987 765 443.
+        </h1>
+        <h1 class="precio">Precio: S/.300</h1>
+        <h1 class="etiquetas">
+          <a href="">camioneta</a> |
+          <a href="">nuevo</a> |
+          <a href="">cargamento</a> |
+          <a href="">precio a tratar</a>
+        </h1>
+      </div>
+
+      <div class="anuncios">
+        <img src="assets/anuncio1.png" width="266" height="450">
+      </div>
+
+      <h1>También te pueden interesar:</h1>
+      <div class="relacionados">
+        <div class="item">
+          <a href="#">
+            <img src="assets/auto_particular.png" width="325">
+          </a>
+          <a href="#" class="desc">Vuelvete la envidia de tus amigos</a>
+        </div>
+
+        <div class="item">
+          <a href="#">
+            <img src="assets/auto_particular.png" width="325">
+          </a>
+          <a href="#" class="desc">Vuelvete la envidia de tus amigos</a>
+        </div>
+
+        <div class="item">
+          <a href="#">
+            <img src="assets/auto_particular.png" width="325">
+          </a>
+          <a href="#" class="desc">Vuelvete la envidia de tus amigos</a>
+        </div>
+
+      </div>
+  </div>
 </body>
 </html>
