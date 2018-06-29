@@ -1,35 +1,31 @@
 const mongoose    = require('mongoose');
 const Schema      = mongoose.Schema;
 
-const usuariosSchema    = new Schema({
-  usuario: String,
-  contraseña: String,
-  nombres: String,
-  apellidos: String,
-  telefono: Number,
-  correo: String,
-  valoracion: Number,
+const mensajesSchema    = new Schema({
+  usuario_emisor: String,
+  usuario_receptor: String,
+  contenido: String,
+  fecha: Date,
+
 });
 
-const usuariosModel = mongoose.model('usuarios',usuariosSchema);
+const mensajesModel = mongoose.model('mensajes',mensajesSchema);
 
 module.exports = {
   create: (req,res,next)=>{
-    const usuario = new usuariosModel({
+    const mensaje = new mensajesModel({
       _id: new mongoose.Types.ObjectId(),
-      usuario: req.body.usuario,
-      contraseña: req.body.contraseña,
-      nombres: req.body.nombres,
-      apellidos: req.body.apellidos,
-      telefono: req.body.telefono,
-      correo: req.body.correo ,
-      valoracion: req.body.valoracion
+      usuario_emisor: req.body.usuario_emisor,
+      usuario_receptor: req.body.usuario_receptor,
+      contenido: req.body.contenido,
+      fecha: new Date(),
+
     });
-    usuario
+    mensaje
       .save()
       .then(result =>{
         res.status(200).json({
-          message: 'Usuario Creado con Exito',
+          message: 'Mensaje Creado con Exito',
           data:{
             ...result
           }
@@ -43,8 +39,8 @@ module.exports = {
       });
   },
   find: (req, res, next) => {
-    usuariosModel.find()
-      .select('_id usuario contraseña nombres apellidos telefono correo valoracion')
+    mensajesModel.find()
+      .select('_id usuario_emisor usuario_receptor contenido fecha')
       .exec()
       .then(docs => {
         const response = {
@@ -69,11 +65,11 @@ module.exports = {
     let updateParams = {
       ...req.body
     };
-    usuariosModel.update({_id: id}, {$set: updateParams})
+    mensajesModel.update({_id: id}, {$set: updateParams})
       .exec()
       .then(result =>{
         res.status(200).json({
-          message: 'Usuario Actualizado'
+          message: 'Mensaje Actualizado'
         });
       })
       .catch(err =>{
@@ -85,8 +81,8 @@ module.exports = {
   },
   findOne: (req,res,next)=>{
     const id = req.params.id;
-    usuariosModel.findById(id)
-      .select('_id usuario contraseña nombres apellidos telefono correo valoracion')
+    mensajesModel.findById(id)
+      .select('_id usuario_emisor usuario_receptor contenido fecha')
       .exec()
       .then(doc => {
         if(doc){
@@ -106,11 +102,11 @@ module.exports = {
   },
   delete: (req, res, next)=>{
     const id = req.params.id;
-    usuariosModel.remove({_id: id})
+    mensajesModel.remove({_id: id})
       .exec()
       .then(result => {
         res.status(200).json({
-          message: 'Usuario eliminado'
+          message: 'Mensaje eliminado'
         });
       })
       .catch(err =>{

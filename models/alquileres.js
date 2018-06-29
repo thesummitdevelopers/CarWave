@@ -1,35 +1,37 @@
 const mongoose    = require('mongoose');
 const Schema      = mongoose.Schema;
 
-const usuariosSchema    = new Schema({
-  usuario: String,
-  contraseña: String,
-  nombres: String,
-  apellidos: String,
-  telefono: Number,
-  correo: String,
-  valoracion: Number,
+const alquileresSchema    = new Schema({
+  usuario_emisor: String,
+  usuario_receptor: String,
+  placa: String,
+  marca: String,
+  modelo: String,
+  costo: String,
+  fecha_alquiler: Date,
+
 });
 
-const usuariosModel = mongoose.model('usuarios',usuariosSchema);
+const alquileresModel = mongoose.model('alquileres',alquileresSchema);
 
 module.exports = {
   create: (req,res,next)=>{
-    const usuario = new usuariosModel({
+    const alquiler = new alquileresModel({
       _id: new mongoose.Types.ObjectId(),
-      usuario: req.body.usuario,
-      contraseña: req.body.contraseña,
-      nombres: req.body.nombres,
-      apellidos: req.body.apellidos,
-      telefono: req.body.telefono,
-      correo: req.body.correo ,
-      valoracion: req.body.valoracion
+      usuario_emisor: req.body.usuario_emisor,
+      usuario_receptor: req.body.usuario_receptor,
+      placa: req.body.placa,
+      marca: req.body.marca,
+      modelo: req.body.modelo,
+      costo: req.body.costo,
+      fecha: new Date(),
+
     });
-    usuario
+    alquiler
       .save()
       .then(result =>{
         res.status(200).json({
-          message: 'Usuario Creado con Exito',
+          message: 'Alquiler creado con Exito',
           data:{
             ...result
           }
@@ -43,8 +45,8 @@ module.exports = {
       });
   },
   find: (req, res, next) => {
-    usuariosModel.find()
-      .select('_id usuario contraseña nombres apellidos telefono correo valoracion')
+    alquileresModel.find()
+      .select('_id usuario_emisor usuario_receptor placa marca modelo costo fecha')
       .exec()
       .then(docs => {
         const response = {
@@ -69,11 +71,11 @@ module.exports = {
     let updateParams = {
       ...req.body
     };
-    usuariosModel.update({_id: id}, {$set: updateParams})
+    alquileresModel.update({_id: id}, {$set: updateParams})
       .exec()
       .then(result =>{
         res.status(200).json({
-          message: 'Usuario Actualizado'
+          message: 'Alquiler Actualizado'
         });
       })
       .catch(err =>{
@@ -85,8 +87,8 @@ module.exports = {
   },
   findOne: (req,res,next)=>{
     const id = req.params.id;
-    usuariosModel.findById(id)
-      .select('_id usuario contraseña nombres apellidos telefono correo valoracion')
+    alquileresModel.findById(id)
+      .select('_id usuario_emisor usuario_receptor placa marca modelo costo fecha')
       .exec()
       .then(doc => {
         if(doc){
@@ -106,11 +108,11 @@ module.exports = {
   },
   delete: (req, res, next)=>{
     const id = req.params.id;
-    usuariosModel.remove({_id: id})
+    alquileresModel.remove({_id: id})
       .exec()
       .then(result => {
         res.status(200).json({
-          message: 'Usuario eliminado'
+          message: 'Alquiler eliminado'
         });
       })
       .catch(err =>{

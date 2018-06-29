@@ -25,6 +25,12 @@ router.use('/usuarios', usuariosRouter);
 var publicacionesRouter = require('./registros/publicaciones');
 router.use('/publicaciones', publicacionesRouter);
 
+var mensajesRouter = require('./registros/mensajes');
+router.use('/mensajes', mensajesRouter);
+
+var alquileresRouter = require('./registros/alquileres');
+router.use('/alquileres', alquileresRouter);
+
 // REGISTREMOS NUESTRAS RUTAS -------
 // TODAS LAS RUTAS TENDRAN EL PREFIJO /API
 app.use('/api', router);
