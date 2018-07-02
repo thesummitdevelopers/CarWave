@@ -1,0 +1,135 @@
+.general{
+  background-color: rgba(0,0,0,0);
+  width: auto;
+  height: auto;
+}
+
+.barraNavegacion{
+  padding-bottom: 5px;
+  height: 63px;
+}
+
+#nav{
+  background-color: #00709f;
+  width: 1366px;
+}
+
+#nav a:hover{
+  color: #faffa3;
+}
+
+#nav a{
+  display: inline-block;
+  padding: 0 50px 0 50px;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  text-shadow: #000 0 -1px 0;
+}
+
+input{
+  height: 30px;
+  width: 350px;
+  font-size: 20px;
+  padding-left: 5px;
+  border: none;
+}
+
+body{
+  margin: auto;
+}
+
+div.general{
+  background-color: rgba(0,0,0,0);
+  width: 1366px;
+  height: auto;
+}
+
+div.imagenesPrevias{
+  float: left;
+  background-color: black;
+  width: 150px;
+  height: auto;
+  margin-top: 20px;
+}
+
+div.imagenCompleta{
+  float: left;
+  width: 490px;
+  height: auto;
+  margin-top: 90px;
+}
+
+div.descripcion{
+  float: left;
+  width: 460px;
+  height: auto;
+  text-align: center;
+}
+
+div.anuncios{
+  background-color: green;
+  float: right;
+  width: 266px;
+  height: 900px;
+  margin-top: 20px;
+}
+
+div.relacionados{
+  background-color: yellow;
+  width: 1100px;
+  height: auto;
+  float: left;
+}
+
+.imagenesPrevias .item{
+  margin: 5px 5px 5px 5px;
+  background-color: white;
+  text-align: center;
+}
+
+.imagenCompleta .item{
+  width:490px;
+  height:auto;
+}
+
+.descripcion .titulo{
+  font-weight: bold;
+  font-size: 40px;
+  text-decoration: underline;
+  text-align: center;
+  max-width: 440px;
+  max-height: 100px;
+  min-width: 440px;
+  min-height: 100px;
+  margin-top: 20px;
+}
+
+.descripcion .cuerpo{
+  text-align: left;
+  font-weight: normal;
+  font-size: 25px;
+  margin: 0 5px 0 8px;
+  max-width: 440px;
+  max-height: 500px;
+  min-width: 440px;
+  min-height: 500px;
+}
+
+.descripcion .precio{
+  width: 75px;
+  height: 20px;
+}
+
+.descripcion button{
+  font-size: 25px;
+  font
+}
+
+a{
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: lighter;
+}

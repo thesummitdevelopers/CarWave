@@ -1,9 +1,9 @@
 $('document').ready(function(){
   $('#acordeon').accordion({
-      collapsible: true,
+      collapsible: false,
       heightStyle: 'content',
       "icons": { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus" }
     });
 
-  
+
 });
