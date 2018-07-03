@@ -1,5 +1,5 @@
 .general{
-  background-color: rgba(0,0,0,0);
+  background-color: white;
   width: auto;
   height: auto;
 }
@@ -67,7 +67,6 @@ input{
 }
 
 body  {
-    background: url(../assets/bg.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -75,4 +74,61 @@ body  {
     height: 100%;
     width: 100%;
     margin: auto;
+}
+
+.footer{
+  width: 1366px;
+  height: 150px;
+  margin-top: 10px;
+  float: left;
+  font-size: 25px;
+  font-weight: bold;
+  border-top: 4px solid #00709f;
+  border-bottom: 4px solid #00709f;
+}
+
+.footer .infoContacto{
+  width: 681px;
+  height: 100%;
+  float: left;
+}
+
+.infoContacto img{
+  margin: 0 0 0 5px;
+  float: left;
+}
+
+.infoContacto h1{
+  float: left;
+  margin-left: 40px;
+  font-size: 20px;
+}
+
+.infoContacto ul{
+  margin: 0 0 0 0;
+}
+
+.footer .sopoTecnico{
+  background-color: #00709f;
+  width: 409px;
+  height: 100%;
+  float: left;
+  font-size: 30px;
+  border-right: 1px;
+  text-align: center;
+  color: white;
+}
+
+.sopoTecnico h1{
+  font-size: 22px;
+}
+
+.footer .copyright{
+  background-color: #00709f;
+  width: 275px;
+  height: 100%;
+  float: right;
+  font-size: 22px;
+  text-align: center;
+  color: white;
 }

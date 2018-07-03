@@ -28,7 +28,7 @@
   text-shadow: #000 0 -1px 0;
 }
 
-input{
+.barraNavegacion input{
   height: 30px;
   width: 350px;
   font-size: 20px;
@@ -51,14 +51,14 @@ div.imagenesPrevias{
   background-color: black;
   width: 150px;
   height: auto;
-  margin-top: 20px;
+  margin-top: 100px;
 }
 
 div.imagenCompleta{
   float: left;
   width: 490px;
   height: auto;
-  margin-top: 90px;
+  margin-top: 80px;
 }
 
 div.descripcion{
@@ -72,8 +72,8 @@ div.anuncios{
   background-color: green;
   float: right;
   width: 266px;
-  height: 900px;
-  margin-top: 20px;
+  height: 450px;
+  margin-top: 100px;
 }
 
 div.relacionados{
@@ -104,27 +104,64 @@ div.relacionados{
   min-width: 440px;
   min-height: 100px;
   margin-top: 20px;
+  background-color: #f7f7f7;
 }
 
 .descripcion .cuerpo{
   text-align: left;
   font-weight: normal;
   font-size: 25px;
-  margin: 0 5px 0 8px;
+  margin-top: 5px;
   max-width: 440px;
-  max-height: 500px;
+  max-height: 200px;
   min-width: 440px;
-  min-height: 500px;
+  min-height: 200px;
+  background-color: #f7f7f7;
+}
+
+.descripcion .adicional{
+  border: 1px solid black;
+  width: 440px;
+  height: auto;
+  margin: 0 5px 0 10px;
+  text-align: right;
+  background-color: #f7f7f7;
+}
+
+.adicional input, .adicional select {
+  width: 130px;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+  margin-left: 2px;
+}
+
+.adicional h1{
+  margin: 0 90px 5px 0;
+  font-weight: normal;
+  font-size: 25px;
 }
 
 .descripcion .precio{
   width: 75px;
   height: 20px;
+  font-size: 20px;
 }
 
-.descripcion button{
-  font-size: 25px;
-  font
+.descripcion #publicar, .descripcion #cancelar{
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 5px;
+  background-color: #00709f;
+  color: white;
+}
+
+.descripcion #cancelar{
+  background-color: #b80f22;
+}
+
+.descripcion > h1{
+  margin: 5px 0 5px 0;
 }
 
 a{
@@ -132,4 +169,61 @@ a{
   text-decoration: none;
   color: black;
   font-weight: lighter;
+}
+
+.footer{
+  width: 1366px;
+  height: 150px;
+  margin-top: 25px;
+  float: right;
+  font-size: 25px;
+  font-weight: bold;
+  border-top: 4px solid #00709f;
+  border-bottom: 4px solid #00709f;
+}
+
+.footer .infoContacto{
+  width: 681px;
+  height: 100%;
+  float: left;
+}
+
+.infoContacto img{
+  margin: 0 0 0 5px;
+  float: left;
+}
+
+.infoContacto h1{
+  float: left;
+  margin-left: 40px;
+  font-size: 20px;
+}
+
+.infoContacto ul{
+  margin: 0 0 0 0;
+}
+
+.footer .sopoTecnico{
+  background-color: #00709f;
+  width: 409px;
+  height: 100%;
+  float: left;
+  font-size: 30px;
+  border-right: 1px;
+  text-align: center;
+  color: white;
+}
+
+.sopoTecnico h1{
+  font-size: 22px;
+}
+
+.footer .copyright{
+  background-color: #00709f;
+  width: 275px;
+  height: 100%;
+  float: right;
+  font-size: 22px;
+  text-align: center;
+  color: white;
 }
