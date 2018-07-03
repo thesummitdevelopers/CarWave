@@ -7,6 +7,8 @@
     <script type="text/javascript" src="scripts/jquery.js"></script>
     <script type="text/javascript" src="scripts/jquery-ui.js"></script>
     <link rel="stylesheet" href="css/style_publicar.css">
+    <link href="https://fonts.googleapis.com/css?family=Reem+Kufi|Roboto:300" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
   </head>
   <body>
     <div class="general">
@@ -47,13 +49,60 @@
 
       <div class="descripcion">
         <textarea maxlength="30" placeholder="Título de la publicación" class="titulo"></textarea>
-        <textarea maxlength="120" placeholder="Agregue una descripción" class="cuerpo"></textarea>
+        <textarea maxlength="180" placeholder="Agregue una descripción" class="cuerpo"></textarea>
         <h1>Precio: S/.<input type="number" min="0" class="precio"></input></h1>
-        <button type="button">Publicar</button>
+        <div class="adicional">
+          <h1>
+            <b>Información adicional:</b><br>
+            Placa: <input type="text" maxlength="10"></input><br>
+            Modelo: <input type="text" maxlength="15"></input><br>
+            Marca:  <input type="text" maxlength="15"></input><br>
+            Año: <input type="number" maxlength="4"></input><br>
+            Tipo: <select type="text">
+              <option value="volvo">Taxi</option>
+              <option value="volvo">Buses</option>
+              <option value="volvo">Particular</option>
+              <option value="volvo">Familiar</option>
+              <option value="volvo">Camionetas</option>
+              <option value="volvo">Otros</option>
+            </select><br>
+          </h1>
+        </div>
+        <button type="button" id="publicar">Publicar</button>
+        <button type="button" id="cancelar">Cancelar</button>
       </div>
 
       <div class="anuncios">
         <img src="assets/anuncio1.png" width="266" height="450">
       </div>
+
+      <!-- Pie de página -->
+      <div class="footer">
+        <div class="infoContacto">
+          <img src="assets/logo.png" height="100%">
+
+          <h1>
+            Síguenos en:
+            <ul>
+              <li><a target="_blank" href="https://github.com/thesummitdevelopers"><i class="fab fa-github"></i></a></li>
+              <li><a target="_blank" href="https://www.facebook.com/The-Summit-Developers-1558704830808962/?ref=br_rs"><i class="fab fa-facebook"></i></a></li>
+              <li><a target="_blank" href="https://www.linkedin.com/in/oscar-molleapaza-flores-91541a151/"><i class="fab fa-linkedin"></i></a></li>
+              <li><a target="_blank" href="https://twitter.com/TheSummitDevel1"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+          </h1>
+        </div>
+        <div class="sopoTecnico">
+          <br>Soporte tecnico:
+          <h1>
+            ---------------- +51 997 794 482 ----------------
+            thesummitdevelopers@gmail.com
+          </h1>
+        </div>
+        <div class="copyright">
+          <br>© 2017-2018 TheSummitDevelopers Todos los derechos reservados.
+        </div>
+      </div>
+    </div>
 </body>
+
 </html>
